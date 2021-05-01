@@ -17,9 +17,9 @@ Run the following command to activate virtual environment
 
 > source venv/bin/activate
 
-Run the following command to change to the xblock-sdk directory.
+In the xblocks directory, run the following command to clone the XBlock SDK repository from GitHub
 
-> cd xblock-sdk
+> git clone <https://github.com/edx/xblock-sdk.git>
 
 Run the following command to install the XBlock SDK requirements
 
