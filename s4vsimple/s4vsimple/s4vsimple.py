@@ -48,7 +48,7 @@ class S4VSimpleXBlock(XBlock):
         # Just to show data coming in...
         assert data['hello'] == 'world'
 
-        self.count += 1
+        self.count += 10
         return {"count": self.count}
 
     # TO-DO: change this to create the scenarios you'd like to see in the
