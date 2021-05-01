@@ -1,0 +1,9 @@
+/* CSS for S4VSimpleXBlock */
+
+.s4vsimple_block .count {
+    font-weight: bold;
+}
+
+.s4vsimple_block p {
+    cursor: pointer;
+}
