@@ -62,3 +62,18 @@ To see the web interface of the XBlock SDK, you must run the SDK server
 > python manage.py runserver
 
 ![Alt text](/images/index.png?raw=true "S4V Simple XBlock")
+
+<h2> How to install on the server</h2>
+<h3> System Administrator </h3>
+To install the XBlock on your platform, add the following to your requirements.txt file:
+
+> git+https://github.com/thangle-s4v/xblock-simplevideo.git@master#egg=simplevideo==0.0.1
+
+<h3>Course Staff </h3>
+To install the XBlock in your course, access your Advanced Module List:
+
+> Settings -> Advanced Settings -> Advanced Module List
+
+and add the following:
+
+> simplevideo
