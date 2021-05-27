@@ -67,7 +67,7 @@ To see the web interface of the XBlock SDK, you must run the SDK server
 <h3> System Administrator </h3>
 To install the XBlock on your platform, add the following to your requirements.txt file:
 
-> git+https://github.com/thangle-s4v/xblock-simplevideo.git@master#egg=simplevideo==0.0.1
+> git+https://github.com/thangle-s4v/xblock-simplevideo.git@main#egg=simplevideo==0.0.1
 
 <h3>Course Staff </h3>
 To install the XBlock in your course, access your Advanced Module List:

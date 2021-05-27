@@ -60,6 +60,23 @@ class SimpleVideoXBlock(XBlock):
             frag.initialize_js('SimpleVideoBlock')
         return frag
 
+    def studio_view(self, context):
+        """
+        Create a fragment used to display the edit view in the Studio.
+        """
+        html_str = pkg_resources.resource_string(
+            __name__, "static/html/simplevideo_edit.html")
+        href = self.href or ''
+        frag = Fragment(str(html_str).format(
+            href=href, maxwidth=self.maxwidth, maxheight=self.maxheight))
+
+        js_str = pkg_resources.resource_string(
+            __name__, "static/js/simplevideo_edit.js")
+        frag.add_javascript(str(js_str))
+        frag.initialize_js('SimpleVideoEditBlock')
+
+        return frag
+
     def get_embed_code_for_url(self, url):
         """
         Get the code to embed from the oEmbed provider.
@@ -111,3 +128,14 @@ class SimpleVideoXBlock(XBlock):
             self.watched_count += 1
 
         return {'watched_count': self.watched_count}
+
+    @XBlock.json_handler
+    def studio_submit(self, data, suffix=''):
+        """
+        Called when submitting the form in Studio.
+        """
+        self.href = data.get('href')
+        self.maxwidth = data.get('maxwidth')
+        self.maxheight = data.get('maxheight')
+
+        return {'result': 'success'}
