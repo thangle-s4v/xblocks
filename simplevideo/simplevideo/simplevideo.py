@@ -71,7 +71,7 @@ class SimpleVideoXBlock(XBlock):
             href=href, maxwidth=self.maxwidth, maxheight=self.maxheight))
 
         js_str = pkg_resources.resource_string(
-            __name__, "static/js/simplevideo_edit.js")
+            __name__, "static/js/src/simplevideo_edit.js")
         frag.add_javascript(str(js_str))
         frag.initialize_js('SimpleVideoEditBlock')
 
